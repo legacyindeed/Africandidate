@@ -140,7 +140,7 @@ export default function Navbar() {
         }
 
         .logo-img {
-          height: 70px;
+          height: 120px;
           width: auto;
           object-fit: contain;
         }
