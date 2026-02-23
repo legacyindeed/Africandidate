@@ -1,11 +1,11 @@
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight, MapPin, Users, BarChart3 } from 'lucide-react';
 
-// Testimonial avatars
+// Testimonial avatars - African MBA students
 const avatars = [
-  "https://i.pravatar.cc/100?img=24",
-  "https://i.pravatar.cc/100?img=32",
-  "https://i.pravatar.cc/100?img=44",
+  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
+  "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=100&h=100&fit=crop&crop=face",
+  "https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?w=100&h=100&fit=crop&crop=face",
 ];
 
 export default function Home() {
@@ -126,7 +126,9 @@ export default function Home() {
           min-height: 100vh;
           position: relative;
           overflow-x: hidden;
+          overflow-y: auto;
           font-family: 'Plus Jakarta Sans', sans-serif;
+          padding-bottom: 40px;
         }
 
         /* Blobs */
@@ -554,10 +556,10 @@ export default function Home() {
           .hero-main {
             flex-direction: column;
             text-align: center;
-            padding: 80px 24px 30px;
+            padding: 100px 24px 40px;
             gap: 24px;
             height: auto;
-            min-height: calc(100vh - 60px);
+            min-height: auto;
           }
 
           .hero-content {
@@ -596,7 +598,7 @@ export default function Home() {
 
         @media (max-width: 640px) {
           .hero-main {
-            padding: 70px 16px 20px;
+            padding: 100px 16px 40px;
           }
 
           .hero-title {
