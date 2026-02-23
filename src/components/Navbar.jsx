@@ -119,10 +119,13 @@ export default function Navbar() {
           left: 0;
           right: 0;
           z-index: 1000;
-          padding: 14px 24px;
+          height: 70px;
+          padding: 0 24px;
           background: #f8fafc;
           border-bottom: 1px solid rgba(0, 0, 0, 0.06);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+          display: flex;
+          align-items: center;
         }
 
         .navbar-inner {
@@ -140,7 +143,7 @@ export default function Navbar() {
         }
 
         .logo-img {
-          height: 120px;
+          height: 55px;
           width: auto;
           object-fit: contain;
         }
@@ -348,7 +351,8 @@ export default function Navbar() {
 
         @media (max-width: 1024px) {
           .navbar {
-            padding: 16px;
+            height: 60px;
+            padding: 0 16px;
           }
         }
       `}</style>
