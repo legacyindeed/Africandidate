@@ -18,33 +18,33 @@ const checklistData = {
       tag: 'urgent'
     },
     {
+      id: 'financial-docs',
+      title: 'Start gathering financial documents',
+      description: 'Begin this immediately — you\'ll need these documents twice: first for your school to issue the I-20, and again for your visa interview. Gather bank statements showing sufficient funds for tuition + living costs (usually 1 year\'s worth), and sponsorship letters if applicable.',
+      tag: 'urgent'
+    },
+    {
       id: 'sign-i20',
       title: 'Receive and sign your I-20 form',
-      description: 'Your university will issue an I-20 (Certificate of Eligibility). You MUST sign it before your visa interview. Download and print copies — you\'ll need them multiple times.',
+      description: 'Once you submit your financial documents, your university will issue an I-20 (Certificate of Eligibility). You MUST sign it before your visa interview. Download and print copies — you\'ll need them multiple times.',
+      tag: 'urgent'
+    },
+    {
+      id: 'sevis-fee',
+      title: 'Pay the SEVIS fee (Form I-901)',
+      description: 'This is a mandatory $350 fee paid online. You must pay this BEFORE booking your visa interview. Keep the receipt — bring it to the interview and again when you arrive in the US.',
       tag: 'urgent'
     },
     {
       id: 'schedule-visa',
       title: 'Schedule your F-1 visa interview',
-      description: 'Book your interview at the nearest US consulate or embassy. Slots fill up fast — book as early as possible, especially in peak months (May–August).',
+      description: 'Book your interview at the nearest US consulate or embassy. Slots fill up fast — book as early as possible, especially in peak months (May–August). Make sure you\'ve paid your SEVIS fee first.',
       tag: 'urgent'
     },
     {
       id: 'gather-docs',
-      title: 'Gather visa interview documents',
-      description: 'You\'ll need: valid passport (6+ months validity), I-20, SEVIS fee receipt (Form I-901), visa application confirmation, passport photo, and proof of financial support. Check your consulate\'s specific list.',
-      tag: 'important'
-    },
-    {
-      id: 'sevis-fee',
-      title: 'Pay the SEVIS fee (Form I-901)',
-      description: 'This is a mandatory $350 fee paid online before your visa interview. Keep the receipt — bring it to the interview and again when you arrive in the US.',
-      tag: 'urgent'
-    },
-    {
-      id: 'financial-docs',
-      title: 'Start gathering financial documents',
-      description: 'Bank statements showing sufficient funds for tuition + living costs (usually 1 year\'s worth). Sponsorship letters if applicable. The more proof, the smoother your interview.',
+      title: 'Gather remaining visa interview documents',
+      description: 'You\'ll need: valid passport (6+ months validity), signed I-20, SEVIS fee receipt (Form I-901), visa application confirmation (DS-160), passport photo, and your financial documents. Check your consulate\'s specific list for any additional requirements.',
       tag: 'important'
     },
     {
