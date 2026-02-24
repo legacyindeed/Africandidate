@@ -80,10 +80,14 @@ export default function Budget() {
             <h3 style={{ color: '#065f46', marginBottom: '0.5rem', fontSize: '1.1rem', fontWeight: 700 }}>
               Scholarships Are Your First Option
             </h3>
-            <p style={{ color: '#047857', lineHeight: '1.7', fontSize: '0.95rem', marginBottom: '0' }}>
+            <p style={{ color: '#047857', lineHeight: '1.7', fontSize: '0.95rem', marginBottom: '0.75rem' }}>
               Many MBA programs offer merit-based scholarships ranging from <strong>partial to full funding</strong> based on the strength of your application.
               For students who receive partial scholarships, the remaining costs can be covered through the loan options listed below or through family funds if available.
               Always maximize your scholarship potential before relying on loans.
+            </p>
+            <p style={{ color: '#047857', lineHeight: '1.7', fontSize: '0.95rem', marginBottom: '0', background: 'rgba(255,255,255,0.5)', padding: '12px', borderRadius: '8px' }}>
+              <strong>Pro tip:</strong> You can use scholarship offers from other schools to negotiate a better package from your preferred school.
+              However, for this to be effective, the competing offer should come from a school within the same ranking tier or higher than your target school.
             </p>
           </div>
         </div>
