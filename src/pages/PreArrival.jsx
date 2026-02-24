@@ -95,8 +95,8 @@ const checklistData = {
       title: 'Sort out finances for arrival',
       description: (
         <>
-          Open a US bank account if possible before you land (some banks allow online opening for internationals). Otherwise, have enough cash or a card that works internationally for your first few days. Check our{' '}
-          <Link to="/banking" style={{ color: 'var(--color-accent-primary)' }}>Banking recommendations</Link>.
+          Have enough cash or a card that works internationally to cover your first few days before you open a US bank account. This covers airport transport, food, and essentials while you get settled. Check our{' '}
+          <Link to="/banking" style={{ color: 'var(--color-accent-primary)' }}>Banking recommendations</Link> for what to do once you arrive.
         </>
       ),
       tag: 'important'
@@ -121,7 +121,7 @@ const checklistData = {
     {
       id: 'download-apps',
       title: 'Download key apps before landing',
-      description: 'Install: Google Maps, Uber/Lyft, your bank\'s app, your university\'s app, and a messaging app to stay in touch with family back home (WhatsApp works great).',
+      description: 'Install: Google Maps, Uber/Lyft, your university\'s app, and a messaging app to stay in touch with family back home (WhatsApp works great).',
       tag: 'helpful'
     },
   ],
