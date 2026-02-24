@@ -72,7 +72,7 @@ export const cities = [
     region: "Northeast",
     costIndex: "Expensive",
     school: "Columbia & NYU Stern",
-    costs: { rent: 4500, groceries: 700, transportation: 130, utilities: 200, diningOut: 500, mobilePlan: 50, healthInsurance: 350 }
+    costs: { rent: 5500, groceries: 700, transportation: 130, utilities: 200, diningOut: 500, mobilePlan: 50, healthInsurance: 350 }
   },
 
   // New York - Johnson (Cornell)
@@ -270,7 +270,7 @@ export const cities = [
     region: "West",
     costIndex: "Expensive",
     school: "Anderson (UCLA) & Marshall (USC)",
-    costs: { rent: 3000, groceries: 580, transportation: 200, utilities: 175, diningOut: 450, mobilePlan: 50, healthInsurance: 340 }
+    costs: { rent: 3500, groceries: 580, transportation: 200, utilities: 175, diningOut: 450, mobilePlan: 50, healthInsurance: 340 }
   },
 
   // Washington - Foster (UW)
