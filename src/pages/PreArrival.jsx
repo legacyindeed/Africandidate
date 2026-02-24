@@ -181,12 +181,6 @@ const checklistData = {
   ],
   'first-month': [
     {
-      id: 'find-housing',
-      title: 'Find permanent housing (if not settled)',
-      description: 'If you\'re in temporary housing (dorm, Airbnb, or a friend\'s place), start actively searching. Use university housing boards, Facebook groups, and apps like Zillow or Apartments.com. Ask fellow international students.',
-      tag: 'important'
-    },
-    {
       id: 'setup-utilities',
       title: 'Set up utilities and internet',
       description: 'If renting your own place, you\'ll likely need to set up electricity, gas, water, and internet. Your landlord or a local guide can point you to the right providers. Budget for deposits.',
