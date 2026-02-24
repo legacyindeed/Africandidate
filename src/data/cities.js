@@ -1,5 +1,5 @@
 // MBA School Cities - Cost of living data for Top 30 MBA program locations
-// Rent data sourced from RentCafe, Apartment List, Dwellsy IQ (2025-2026 data)
+// Rent data based on 2BR apartments near campus (2025-2026 market data)
 // Cost Index: "Expensive" (total >$4,000/mo), "Moderate" ($2,500-$4,000), "Affordable" (<$2,500)
 
 export const cities = [
@@ -12,7 +12,7 @@ export const cities = [
     region: "Northeast",
     costIndex: "Moderate",
     school: "Wharton (UPenn)",
-    costs: { rent: 1750, groceries: 520, transportation: 110, utilities: 170, diningOut: 350, mobilePlan: 45, healthInsurance: 300 }
+    costs: { rent: 2100, groceries: 520, transportation: 110, utilities: 180, diningOut: 350, mobilePlan: 45, healthInsurance: 300 }
   },
 
   // Pennsylvania - Tepper (CMU)
@@ -22,7 +22,7 @@ export const cities = [
     region: "Northeast",
     costIndex: "Moderate",
     school: "Tepper (CMU)",
-    costs: { rent: 1380, groceries: 420, transportation: 110, utilities: 150, diningOut: 260, mobilePlan: 45, healthInsurance: 280 }
+    costs: { rent: 1650, groceries: 420, transportation: 110, utilities: 160, diningOut: 260, mobilePlan: 45, healthInsurance: 280 }
   },
 
   // Massachusetts - Harvard Business School
@@ -32,7 +32,7 @@ export const cities = [
     region: "Northeast",
     costIndex: "Expensive",
     school: "Harvard Business School",
-    costs: { rent: 2600, groceries: 600, transportation: 120, utilities: 200, diningOut: 450, mobilePlan: 50, healthInsurance: 340 }
+    costs: { rent: 3400, groceries: 600, transportation: 120, utilities: 200, diningOut: 450, mobilePlan: 50, healthInsurance: 340 }
   },
 
   // Massachusetts - MIT Sloan
@@ -42,7 +42,7 @@ export const cities = [
     region: "Northeast",
     costIndex: "Expensive",
     school: "MIT Sloan",
-    costs: { rent: 2850, groceries: 620, transportation: 110, utilities: 190, diningOut: 480, mobilePlan: 50, healthInsurance: 350 }
+    costs: { rent: 3600, groceries: 620, transportation: 110, utilities: 200, diningOut: 480, mobilePlan: 50, healthInsurance: 350 }
   },
 
   // Connecticut - Yale SOM
@@ -52,7 +52,7 @@ export const cities = [
     region: "Northeast",
     costIndex: "Moderate",
     school: "Yale SOM",
-    costs: { rent: 1750, groceries: 500, transportation: 110, utilities: 170, diningOut: 320, mobilePlan: 45, healthInsurance: 320 }
+    costs: { rent: 2000, groceries: 500, transportation: 110, utilities: 175, diningOut: 320, mobilePlan: 45, healthInsurance: 320 }
   },
 
   // New Hampshire - Tuck (Dartmouth)
@@ -62,7 +62,7 @@ export const cities = [
     region: "Northeast",
     costIndex: "Expensive",
     school: "Tuck (Dartmouth)",
-    costs: { rent: 2200, groceries: 550, transportation: 115, utilities: 185, diningOut: 380, mobilePlan: 50, healthInsurance: 325 }
+    costs: { rent: 2600, groceries: 550, transportation: 115, utilities: 200, diningOut: 380, mobilePlan: 50, healthInsurance: 325 }
   },
 
   // New York - Columbia Business School & NYU Stern
@@ -72,7 +72,7 @@ export const cities = [
     region: "Northeast",
     costIndex: "Expensive",
     school: "Columbia & NYU Stern",
-    costs: { rent: 3550, groceries: 700, transportation: 130, utilities: 180, diningOut: 500, mobilePlan: 50, healthInsurance: 350 }
+    costs: { rent: 4500, groceries: 700, transportation: 130, utilities: 200, diningOut: 500, mobilePlan: 50, healthInsurance: 350 }
   },
 
   // New York - Johnson (Cornell)
@@ -82,7 +82,7 @@ export const cities = [
     region: "Northeast",
     costIndex: "Moderate",
     school: "Johnson (Cornell)",
-    costs: { rent: 1650, groceries: 480, transportation: 100, utilities: 170, diningOut: 300, mobilePlan: 45, healthInsurance: 300 }
+    costs: { rent: 1900, groceries: 480, transportation: 100, utilities: 180, diningOut: 300, mobilePlan: 45, healthInsurance: 300 }
   },
 
   // District of Columbia - McDonough (Georgetown)
@@ -92,7 +92,7 @@ export const cities = [
     region: "Northeast",
     costIndex: "Expensive",
     school: "McDonough (Georgetown)",
-    costs: { rent: 2030, groceries: 580, transportation: 140, utilities: 160, diningOut: 420, mobilePlan: 50, healthInsurance: 330 }
+    costs: { rent: 2800, groceries: 580, transportation: 140, utilities: 180, diningOut: 420, mobilePlan: 50, healthInsurance: 330 }
   },
 
   // ==================== SOUTHEAST ====================
@@ -104,7 +104,7 @@ export const cities = [
     region: "Southeast",
     costIndex: "Moderate",
     school: "Fuqua (Duke)",
-    costs: { rent: 1420, groceries: 440, transportation: 150, utilities: 140, diningOut: 280, mobilePlan: 45, healthInsurance: 275 }
+    costs: { rent: 1750, groceries: 440, transportation: 150, utilities: 150, diningOut: 280, mobilePlan: 45, healthInsurance: 275 }
   },
 
   // North Carolina - Kenan-Flagler (UNC)
@@ -114,7 +114,7 @@ export const cities = [
     region: "Southeast",
     costIndex: "Moderate",
     school: "Kenan-Flagler (UNC)",
-    costs: { rent: 1550, groceries: 460, transportation: 140, utilities: 145, diningOut: 300, mobilePlan: 45, healthInsurance: 278 }
+    costs: { rent: 1850, groceries: 460, transportation: 140, utilities: 155, diningOut: 300, mobilePlan: 45, healthInsurance: 278 }
   },
 
   // Virginia - Darden (UVA)
@@ -124,7 +124,7 @@ export const cities = [
     region: "Southeast",
     costIndex: "Moderate",
     school: "Darden (UVA)",
-    costs: { rent: 1520, groceries: 460, transportation: 130, utilities: 150, diningOut: 300, mobilePlan: 45, healthInsurance: 282 }
+    costs: { rent: 1800, groceries: 460, transportation: 130, utilities: 160, diningOut: 300, mobilePlan: 45, healthInsurance: 282 }
   },
 
   // Georgia - Goizueta (Emory) & Scheller (Georgia Tech)
@@ -134,7 +134,7 @@ export const cities = [
     region: "Southeast",
     costIndex: "Moderate",
     school: "Goizueta (Emory) & Scheller (Georgia Tech)",
-    costs: { rent: 1400, groceries: 480, transportation: 180, utilities: 170, diningOut: 350, mobilePlan: 45, healthInsurance: 290 }
+    costs: { rent: 1900, groceries: 480, transportation: 180, utilities: 175, diningOut: 350, mobilePlan: 45, healthInsurance: 290 }
   },
 
   // Tennessee - Owen (Vanderbilt)
@@ -144,7 +144,7 @@ export const cities = [
     region: "Southeast",
     costIndex: "Moderate",
     school: "Owen (Vanderbilt)",
-    costs: { rent: 1620, groceries: 460, transportation: 170, utilities: 160, diningOut: 340, mobilePlan: 45, healthInsurance: 285 }
+    costs: { rent: 2000, groceries: 460, transportation: 170, utilities: 170, diningOut: 340, mobilePlan: 45, healthInsurance: 285 }
   },
 
   // ==================== MIDWEST ====================
@@ -156,7 +156,7 @@ export const cities = [
     region: "Midwest",
     costIndex: "Moderate",
     school: "Booth (UChicago)",
-    costs: { rent: 1580, groceries: 520, transportation: 130, utilities: 140, diningOut: 400, mobilePlan: 50, healthInsurance: 310 }
+    costs: { rent: 2200, groceries: 520, transportation: 130, utilities: 160, diningOut: 400, mobilePlan: 50, healthInsurance: 310 }
   },
 
   // Illinois - Kellogg (Northwestern)
@@ -166,7 +166,7 @@ export const cities = [
     region: "Midwest",
     costIndex: "Expensive",
     school: "Kellogg (Northwestern)",
-    costs: { rent: 2100, groceries: 560, transportation: 120, utilities: 145, diningOut: 380, mobilePlan: 50, healthInsurance: 320 }
+    costs: { rent: 2500, groceries: 560, transportation: 120, utilities: 165, diningOut: 380, mobilePlan: 50, healthInsurance: 320 }
   },
 
   // Michigan - Ross (UMich)
@@ -176,7 +176,7 @@ export const cities = [
     region: "Midwest",
     costIndex: "Moderate",
     school: "Ross (UMich)",
-    costs: { rent: 1520, groceries: 470, transportation: 110, utilities: 150, diningOut: 320, mobilePlan: 45, healthInsurance: 295 }
+    costs: { rent: 2100, groceries: 470, transportation: 110, utilities: 170, diningOut: 320, mobilePlan: 45, healthInsurance: 295 }
   },
 
   // Indiana - Kelley (Indiana University)
@@ -186,7 +186,7 @@ export const cities = [
     region: "Midwest",
     costIndex: "Affordable",
     school: "Kelley (Indiana)",
-    costs: { rent: 1020, groceries: 390, transportation: 110, utilities: 140, diningOut: 250, mobilePlan: 40, healthInsurance: 265 }
+    costs: { rent: 1300, groceries: 390, transportation: 110, utilities: 150, diningOut: 250, mobilePlan: 40, healthInsurance: 265 }
   },
 
   // Indiana - Mendoza (Notre Dame)
@@ -196,7 +196,7 @@ export const cities = [
     region: "Midwest",
     costIndex: "Affordable",
     school: "Mendoza (Notre Dame)",
-    costs: { rent: 920, groceries: 375, transportation: 125, utilities: 140, diningOut: 220, mobilePlan: 40, healthInsurance: 262 }
+    costs: { rent: 1200, groceries: 375, transportation: 125, utilities: 150, diningOut: 220, mobilePlan: 40, healthInsurance: 262 }
   },
 
   // Missouri - Olin (WUSTL)
@@ -206,7 +206,7 @@ export const cities = [
     region: "Midwest",
     costIndex: "Affordable",
     school: "Olin (WUSTL)",
-    costs: { rent: 1080, groceries: 380, transportation: 130, utilities: 140, diningOut: 250, mobilePlan: 45, healthInsurance: 265 }
+    costs: { rent: 1400, groceries: 380, transportation: 130, utilities: 150, diningOut: 250, mobilePlan: 45, healthInsurance: 265 }
   },
 
   // ==================== SOUTHWEST ====================
@@ -218,7 +218,7 @@ export const cities = [
     region: "Southwest",
     costIndex: "Moderate",
     school: "McCombs (UT Austin)",
-    costs: { rent: 1440, groceries: 480, transportation: 170, utilities: 180, diningOut: 380, mobilePlan: 50, healthInsurance: 300 }
+    costs: { rent: 1900, groceries: 480, transportation: 170, utilities: 190, diningOut: 380, mobilePlan: 50, healthInsurance: 300 }
   },
 
   // Texas - Jones (Rice)
@@ -226,9 +226,9 @@ export const cities = [
     name: "Houston",
     state: "Texas",
     region: "Southwest",
-    costIndex: "Affordable",
+    costIndex: "Moderate",
     school: "Jones (Rice)",
-    costs: { rent: 1080, groceries: 450, transportation: 180, utilities: 180, diningOut: 340, mobilePlan: 45, healthInsurance: 290 }
+    costs: { rent: 1600, groceries: 450, transportation: 180, utilities: 190, diningOut: 340, mobilePlan: 45, healthInsurance: 290 }
   },
 
   // Texas - Mays (Texas A&M)
@@ -238,7 +238,7 @@ export const cities = [
     region: "Southwest",
     costIndex: "Affordable",
     school: "Mays (Texas A&M)",
-    costs: { rent: 1080, groceries: 400, transportation: 140, utilities: 170, diningOut: 260, mobilePlan: 45, healthInsurance: 275 }
+    costs: { rent: 1300, groceries: 400, transportation: 140, utilities: 175, diningOut: 260, mobilePlan: 45, healthInsurance: 275 }
   },
 
   // ==================== WEST ====================
@@ -250,7 +250,7 @@ export const cities = [
     region: "West",
     costIndex: "Expensive",
     school: "Stanford GSB",
-    costs: { rent: 3200, groceries: 680, transportation: 150, utilities: 160, diningOut: 550, mobilePlan: 55, healthInsurance: 375 }
+    costs: { rent: 4200, groceries: 680, transportation: 150, utilities: 180, diningOut: 550, mobilePlan: 55, healthInsurance: 375 }
   },
 
   // California - Haas (UC Berkeley)
@@ -260,7 +260,7 @@ export const cities = [
     region: "West",
     costIndex: "Expensive",
     school: "Haas (UC Berkeley)",
-    costs: { rent: 2450, groceries: 610, transportation: 120, utilities: 150, diningOut: 480, mobilePlan: 55, healthInsurance: 355 }
+    costs: { rent: 3400, groceries: 610, transportation: 120, utilities: 170, diningOut: 480, mobilePlan: 55, healthInsurance: 355 }
   },
 
   // California - Anderson (UCLA) & Marshall (USC)
@@ -270,7 +270,7 @@ export const cities = [
     region: "West",
     costIndex: "Expensive",
     school: "Anderson (UCLA) & Marshall (USC)",
-    costs: { rent: 2230, groceries: 580, transportation: 200, utilities: 160, diningOut: 450, mobilePlan: 50, healthInsurance: 340 }
+    costs: { rent: 3000, groceries: 580, transportation: 200, utilities: 175, diningOut: 450, mobilePlan: 50, healthInsurance: 340 }
   },
 
   // Washington - Foster (UW)
@@ -280,7 +280,7 @@ export const cities = [
     region: "West",
     costIndex: "Expensive",
     school: "Foster (UW)",
-    costs: { rent: 2200, groceries: 550, transportation: 140, utilities: 140, diningOut: 420, mobilePlan: 50, healthInsurance: 320 }
+    costs: { rent: 2700, groceries: 550, transportation: 140, utilities: 160, diningOut: 420, mobilePlan: 50, healthInsurance: 320 }
   }
 ];
 
