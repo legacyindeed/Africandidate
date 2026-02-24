@@ -276,15 +276,15 @@ export default function PreArrival() {
   const currentItems = checklistData[activePhase] || [];
 
   return (
-    <div style={{ maxWidth: '900px', margin: '0 auto', padding: '100px 16px 60px' }}>
+    <div style={{ maxWidth: '900px', margin: '0 auto', padding: '100px 16px 60px', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
       {/* Header */}
       <div className="section-header animate-fade-in">
-        <h1 style={{ marginBottom: '0.75rem' }}>Pre-Arrival Checklist</h1>
-        <p style={{ marginBottom: '0.5rem' }}>
+        <h1 style={{ marginBottom: '0.75rem', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Pre-Arrival Checklist</h1>
+        <p style={{ marginBottom: '0.5rem', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
           A step-by-step roadmap from the day you get accepted to your first month on US soil.
           Check off tasks as you go — your progress saves automatically.
         </p>
-        <p style={{ fontSize: '0.875rem', color: 'var(--color-text-muted)' }}>
+        <p style={{ fontSize: '0.875rem', color: 'var(--color-text-muted)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
           Track your progress across all phases
         </p>
       </div>
@@ -313,7 +313,7 @@ export default function PreArrival() {
                 background: isActive ? 'var(--color-accent-primary)' : 'var(--color-bg-tertiary)',
                 color: isActive ? 'var(--color-bg-primary)' : 'var(--color-text-secondary)',
                 cursor: 'pointer',
-                fontFamily: 'Plus Jakarta Sans, sans-serif',
+                fontFamily: "'Plus Jakarta Sans', sans-serif",
                 fontWeight: 500,
                 fontSize: '0.875rem',
                 transition: 'all 0.2s ease'
@@ -376,7 +376,7 @@ export default function PreArrival() {
                 <div style={{ flex: 1 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '0.5rem' }}>
                     <h3 style={{
-                      fontFamily: 'Plus Jakarta Sans, sans-serif',
+                      fontFamily: "'Plus Jakarta Sans', sans-serif",
                       fontWeight: 600,
                       fontSize: '1rem',
                       color: isChecked ? 'var(--color-text-muted)' : 'var(--color-text-primary)',
@@ -392,6 +392,7 @@ export default function PreArrival() {
                         fontWeight: 600,
                         textTransform: 'uppercase',
                         letterSpacing: '0.5px',
+                        fontFamily: "'Plus Jakarta Sans', sans-serif",
                         ...tag
                       }}>
                         {tag.label}
@@ -401,7 +402,8 @@ export default function PreArrival() {
                   <p style={{
                     color: 'var(--color-text-secondary)',
                     fontSize: '0.9rem',
-                    lineHeight: 1.6
+                    lineHeight: 1.6,
+                    fontFamily: "'Plus Jakarta Sans', sans-serif"
                   }}>
                     {item.description}
                   </p>
@@ -421,7 +423,7 @@ export default function PreArrival() {
         borderRadius: '12px',
         textAlign: 'center'
       }} className="animate-fade-in">
-        <p style={{ color: 'var(--color-text-secondary)', fontSize: '0.9rem' }}>
+        <p style={{ color: 'var(--color-text-secondary)', fontSize: '0.9rem', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
           {(() => {
             const totalCompleted = Object.values(checked).filter(Boolean).length;
             const totalItems = Object.values(checklistData).flat().length;
