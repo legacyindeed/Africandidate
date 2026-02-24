@@ -56,6 +56,39 @@ export default function Budget() {
         <p style={{ fontSize: '0.875rem', color: 'var(--color-text-muted)' }}>Loan options for African students + budget planning tools</p>
       </div>
 
+      {/* Scholarship Notice */}
+      <div className="animate-fade-in" style={{ marginBottom: '2rem' }}>
+        <div style={{
+          padding: '1.5rem',
+          background: 'linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%)',
+          border: '1px solid #a7f3d0',
+          borderRadius: '16px',
+          display: 'flex',
+          alignItems: 'flex-start',
+          gap: '1rem'
+        }}>
+          <div style={{
+            padding: '10px',
+            background: '#10b981',
+            borderRadius: '10px',
+            color: 'white',
+            flexShrink: 0
+          }}>
+            <DollarSign size={22} />
+          </div>
+          <div>
+            <h3 style={{ color: '#065f46', marginBottom: '0.5rem', fontSize: '1.1rem', fontWeight: 700 }}>
+              Scholarships Are Your First Option
+            </h3>
+            <p style={{ color: '#047857', lineHeight: '1.7', fontSize: '0.95rem', marginBottom: '0' }}>
+              Many MBA programs offer merit-based scholarships ranging from <strong>partial to full funding</strong> based on the strength of your application.
+              For students who receive partial scholarships, the remaining costs can be covered through the loan options listed below or through family funds if available.
+              Always maximize your scholarship potential before relying on loans.
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Financing Section */}
       <div className="animate-fade-in">
         <div className="card-static" style={{ padding: '2rem', marginBottom: '2rem', background: 'linear-gradient(135deg, var(--color-bg-secondary) 0%, var(--color-bg-tertiary) 100%)', borderLeft: '4px solid var(--color-accent-gold)' }}>
