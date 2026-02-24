@@ -4,6 +4,7 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 
 const mainLinks = [
   { path: '/', label: 'Home' },
+  { path: '/application-strategy', label: 'Application Strategy' },
   { path: '/mba-schools', label: 'Top 30 MBA Schools' },
   { path: '/pre-arrival', label: 'Pre-Arrival' },
   { path: '/budget', label: 'Funding' },

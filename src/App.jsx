@@ -13,6 +13,7 @@ import HealthInsurance from './pages/HealthInsurance'
 import Feedback from './pages/Feedback'
 import MBASchools from './pages/MBASchools'
 import Recruiting from './pages/Recruiting'
+import ApplicationStrategy from './pages/ApplicationStrategy'
 import NotFound from './pages/NotFound'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <main className="flex-1">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/application-strategy" element={<ApplicationStrategy />} />
           <Route path="/budget" element={<Budget />} />
           {/* Redirects for old routes */}
           <Route path="/cost-of-living" element={<Navigate to="/budget" replace />} />
