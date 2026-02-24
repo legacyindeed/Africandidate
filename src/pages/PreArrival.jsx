@@ -20,25 +20,25 @@ const checklistData = {
     {
       id: 'financial-docs',
       title: 'Start gathering financial documents',
-      description: 'Begin this immediately — you\'ll need these documents twice: first for your school to issue the I-20, and again for your visa interview. Gather bank statements showing sufficient funds for tuition + living costs (usually 1 year\'s worth), and sponsorship letters if applicable.',
+      description: 'Begin this immediately. You\'ll need these documents twice: first for your school to issue the I-20, and again for your visa interview. Gather bank statements showing sufficient funds for tuition + living costs (usually 1 year\'s worth), and sponsorship letters if applicable.',
       tag: 'urgent'
     },
     {
       id: 'sign-i20',
       title: 'Receive and sign your I-20 form',
-      description: 'Once you submit your financial documents, your university will issue an I-20 (Certificate of Eligibility). You MUST sign it before your visa interview. Download and print copies — you\'ll need them multiple times.',
+      description: 'Once you submit your financial documents, your university will issue an I-20 (Certificate of Eligibility). You MUST sign it before your visa interview. Download and print copies as you\'ll need them multiple times.',
       tag: 'urgent'
     },
     {
       id: 'sevis-fee',
       title: 'Pay the SEVIS fee (Form I-901)',
-      description: 'This is a mandatory $350 fee paid online. You must pay this BEFORE booking your visa interview. Keep the receipt — bring it to the interview and again when you arrive in the US.',
+      description: 'This is a mandatory $350 fee paid online. You must pay this BEFORE booking your visa interview. Keep the receipt and bring it to the interview and again when you arrive in the US.',
       tag: 'urgent'
     },
     {
       id: 'schedule-visa',
       title: 'Schedule your F-1 visa interview',
-      description: 'Book your interview at the nearest US consulate or embassy. Slots fill up fast — book as early as possible, especially in peak months (May–August). Make sure you\'ve paid your SEVIS fee first.',
+      description: 'Book your interview at the nearest US consulate or embassy. Slots fill up fast, so book as early as possible, especially in peak months (May-August). Make sure you\'ve paid your SEVIS fee first.',
       tag: 'urgent'
     },
     {
@@ -50,7 +50,7 @@ const checklistData = {
     {
       id: 'obtain-visa',
       title: 'Obtain your F-1 visa',
-      description: 'After your interview, your visa will be stamped in your passport. Note: the visa stamp is NOT your entry document — your I-20 and passport together are.',
+      description: 'After your interview, your visa will be stamped in your passport. Note: the visa stamp is NOT your entry document. Your I-20 and passport together are.',
       tag: 'urgent'
     },
     {
@@ -64,19 +64,19 @@ const checklistData = {
     {
       id: 'secure-accommodation',
       title: 'Secure accommodation',
-      description: 'Start searching for housing early — on-campus dorms, off-campus apartments, or temporary stays (Airbnb). Join university housing groups on Facebook and connect with incoming students. Having a confirmed place to stay makes everything else easier.',
+      description: 'Start searching for housing early: on-campus dorms, off-campus apartments, or temporary stays (Airbnb). Join university housing groups on Facebook and connect with incoming students. Having a confirmed place to stay makes everything else easier.',
       tag: 'urgent'
     },
     {
       id: 'book-flight',
       title: 'Book your flight',
-      description: 'The earlier you book, the cheaper your ticket. Compare prices across airlines and booking sites. If transiting through a third country (e.g., UK, Canada, or Schengen), check if you need a transit visa — some countries require one even for layovers.',
+      description: 'The earlier you book, the cheaper your ticket. Compare prices across airlines and booking sites. If transiting through a third country (e.g., UK, Canada, or Schengen), check if you need a transit visa as some countries require one even for layovers.',
       tag: 'urgent'
     },
     {
       id: 'travel-insurance',
       title: 'Purchase travel insurance',
-      description: 'Separate from health insurance, travel insurance covers flight cancellations, lost luggage, and medical emergencies during transit. Cheap peace of mind — buy this right after booking your flight.',
+      description: 'Separate from health insurance, travel insurance covers flight cancellations, lost luggage, and medical emergencies during transit. Cheap peace of mind. Buy this right after booking your flight.',
       tag: 'important'
     },
     {
@@ -114,7 +114,7 @@ const checklistData = {
     },
     {
       id: 'pack-smart',
-      title: 'Pack smart — what to bring vs. buy there',
+      title: 'Pack smart: what to bring vs. buy there',
       description: 'Don\'t over-pack. Bulky items like bedding, kitchen stuff, and toiletries are cheaper to buy on arrival (Walmart, Target, Amazon). Bring documents, valuables, a few days of clothes, and meds.',
       tag: 'helpful'
     },
@@ -129,13 +129,13 @@ const checklistData = {
     {
       id: 'clear-immigration',
       title: 'Clear immigration and customs',
-      description: 'At the airport, you\'ll go through CBP (Customs and Border Protection). Have your passport, I-20, and SEVIS receipt ready. The officer will stamp your I-20 — this is your official entry document. Keep it safe.',
+      description: 'At the airport, you\'ll go through CBP (Customs and Border Protection). Have your passport, I-20, and SEVIS receipt ready. The officer will stamp your I-20. This is your official entry document. Keep it safe.',
       tag: 'urgent'
     },
     {
       id: 'get-to-accommodation',
       title: 'Get to your accommodation',
-      description: 'Know your plan before you land: airport shuttle, taxi, or a friend picking you up. Have the address saved offline in case you have no signal yet. Don\'t rely on buying a SIM at the airport — prices are high.',
+      description: 'Know your plan before you land: airport shuttle, taxi, or a friend picking you up. Have the address saved offline in case you have no signal yet. Don\'t rely on buying a SIM at the airport as prices are high.',
       tag: 'urgent'
     },
     {
@@ -169,7 +169,7 @@ const checklistData = {
     {
       id: 'register-university',
       title: 'Register with your university',
-      description: 'Attend orientation. Complete any international student check-in. Register for classes if not already done. Visit the international student office — they are your #1 resource.',
+      description: 'Attend orientation. Complete any international student check-in. Register for classes if not already done. Visit the international student office as they are your #1 resource.',
       tag: 'urgent'
     },
     {
@@ -189,7 +189,7 @@ const checklistData = {
     {
       id: 'drivers-license',
       title: 'Get a driver\'s license (if applicable)',
-      description: 'If you plan to drive, visit your state\'s DMV with your passport, I-20, and proof of residence. Rules vary by state — some allow internationals to use their home country license for a limited time.',
+      description: 'If you plan to drive, visit your state\'s DMV with your passport, I-20, and proof of residence. Rules vary by state, and some allow internationals to use their home country license for a limited time.',
       tag: 'important'
     },
     {
@@ -288,7 +288,7 @@ export default function PreArrival() {
         <h1 style={{ marginBottom: '0.75rem', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Pre-Arrival Checklist</h1>
         <p style={{ marginBottom: '0.5rem', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
           A step-by-step roadmap from the day you get accepted to your first month on US soil.
-          Check off tasks as you go — your progress saves automatically.
+          Check off tasks as you go. Your progress saves automatically.
         </p>
         <p style={{ fontSize: '0.875rem', color: 'var(--color-text-muted)', fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
           Track your progress across all phases
