@@ -313,7 +313,7 @@ export default function PreArrival() {
                 background: isActive ? 'var(--color-accent-primary)' : 'var(--color-bg-tertiary)',
                 color: isActive ? 'var(--color-bg-primary)' : 'var(--color-text-secondary)',
                 cursor: 'pointer',
-                fontFamily: 'Inter, sans-serif',
+                fontFamily: 'Plus Jakarta Sans, sans-serif',
                 fontWeight: 500,
                 fontSize: '0.875rem',
                 transition: 'all 0.2s ease'
@@ -376,7 +376,7 @@ export default function PreArrival() {
                 <div style={{ flex: 1 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '0.5rem' }}>
                     <h3 style={{
-                      fontFamily: 'Inter, sans-serif',
+                      fontFamily: 'Plus Jakarta Sans, sans-serif',
                       fontWeight: 600,
                       fontSize: '1rem',
                       color: isChecked ? 'var(--color-text-muted)' : 'var(--color-text-primary)',
