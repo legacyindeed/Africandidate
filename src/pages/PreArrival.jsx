@@ -48,6 +48,12 @@ const checklistData = {
       tag: 'important'
     },
     {
+      id: 'obtain-visa',
+      title: 'Obtain your F-1 visa',
+      description: 'After your interview, your visa will be stamped in your passport. Note: the visa stamp is NOT your entry document — your I-20 and passport together are.',
+      tag: 'urgent'
+    },
+    {
       id: 'notify-employer',
       title: 'Notify your employer / current university',
       description: 'If you\'re leaving a job or another program, give proper notice. This keeps your professional reputation clean.',
@@ -56,10 +62,22 @@ const checklistData = {
   ],
   'pre-departure': [
     {
-      id: 'obtain-visa',
-      title: 'Obtain your F-1 visa',
-      description: 'After your interview, your visa will be stamped in your passport. Note: the visa stamp is NOT your entry document — your I-20 and passport together are.',
+      id: 'secure-accommodation',
+      title: 'Secure accommodation',
+      description: 'Start searching for housing early — on-campus dorms, off-campus apartments, or temporary stays (Airbnb). Join university housing groups on Facebook and connect with incoming students. Having a confirmed place to stay makes everything else easier.',
       tag: 'urgent'
+    },
+    {
+      id: 'book-flight',
+      title: 'Book your flight',
+      description: 'The earlier you book, the cheaper your ticket. Compare prices across airlines and booking sites. If transiting through a third country (e.g., UK, Canada, or Schengen), check if you need a transit visa — some countries require one even for layovers.',
+      tag: 'urgent'
+    },
+    {
+      id: 'travel-insurance',
+      title: 'Purchase travel insurance',
+      description: 'Separate from health insurance, travel insurance covers flight cancellations, lost luggage, and medical emergencies during transit. Cheap peace of mind — buy this right after booking your flight.',
+      tag: 'important'
     },
     {
       id: 'health-insurance',
@@ -82,12 +100,6 @@ const checklistData = {
         </>
       ),
       tag: 'important'
-    },
-    {
-      id: 'travel-insurance',
-      title: 'Purchase travel insurance',
-      description: 'Separate from health insurance, travel insurance covers flight cancellations, lost luggage, and medical emergencies during transit. Cheap peace of mind.',
-      tag: 'helpful'
     },
     {
       id: 'research-city',
