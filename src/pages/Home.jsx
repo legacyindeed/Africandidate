@@ -46,7 +46,7 @@ export default function Home() {
 
           {/* CTA Buttons */}
           <div className="hero-ctas">
-            <button className="cta-primary" onClick={() => navigate('/pre-arrival')}>
+            <button className="cta-primary" onClick={() => navigate('/application-strategy')}>
               <span>Start Your Journey</span>
               <ArrowRight size={20} />
             </button>
