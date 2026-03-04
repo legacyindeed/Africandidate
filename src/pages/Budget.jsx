@@ -1,8 +1,9 @@
 import { useState, useMemo } from 'react';
-import { Home, ShoppingCart, Car, Zap, UtensilsCrossed, Smartphone, Heart, Wallet, MapPin, X, TrendingUp, Calculator, Info, Landmark, ExternalLink, CheckCircle, Globe, Clock, DollarSign, ChevronDown, ChevronUp } from 'lucide-react';
+import { Home, ShoppingCart, Car, Zap, UtensilsCrossed, Smartphone, Heart, Wallet, MapPin, X, TrendingUp, Calculator, Info, Landmark, ExternalLink, CheckCircle, Globe, Clock, DollarSign, ChevronDown, ChevronUp, Award, Mail, Calendar } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import CitySearch from '../components/CitySearch';
 import { loanAgencies } from '../data/loanAgencies';
+import { privateScholarships } from '../data/scholarships';
 
 const lifestyleLevels = [
   { id: 'budget', label: 'Budget', emoji: '💰', description: 'Cook most meals, shared apartment, public transit', multiplier: 0.75 },
@@ -116,6 +117,85 @@ export default function Budget() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Private Scholarships for Africans */}
+        <div className="card-static" style={{ padding: '2rem', marginBottom: '2rem', background: 'linear-gradient(135deg, #fef3c7 0%, #fde68a 100%)', borderLeft: '4px solid #f59e0b' }}>
+          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', marginBottom: '1.5rem' }}>
+            <div style={{ padding: '12px', background: '#f59e0b', borderRadius: '12px', color: 'white' }}><Award size={24} /></div>
+            <div>
+              <h2 style={{ color: '#92400e', marginBottom: '0.5rem', fontSize: '1.5rem' }}>Private Scholarships for Africans</h2>
+              <p style={{ color: '#a16207', lineHeight: '1.6' }}>These scholarships are specifically designed to support African students pursuing MBA programs at top business schools.</p>
+            </div>
+          </div>
+
+          {privateScholarships.map((scholarship) => (
+            <div key={scholarship.id} style={{ background: 'white', borderRadius: '16px', padding: '1.5rem', border: '1px solid #fcd34d' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1rem', flexWrap: 'wrap', gap: '1rem' }}>
+                <div>
+                  <h3 style={{ color: '#0f172a', fontSize: '1.25rem', marginBottom: '0.25rem', fontWeight: 700 }}>{scholarship.name}</h3>
+                  <p style={{ color: '#64748b', fontSize: '0.85rem' }}>{scholarship.organization}</p>
+                </div>
+                <span style={{ background: '#10b981', color: 'white', padding: '6px 14px', borderRadius: '20px', fontSize: '0.75rem', fontWeight: 600, whiteSpace: 'nowrap' }}>No Repayment</span>
+              </div>
+
+              <p style={{ color: '#475569', fontSize: '0.95rem', lineHeight: '1.7', marginBottom: '1.25rem' }}>{scholarship.description}</p>
+
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '1.25rem' }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
+                  <DollarSign size={16} style={{ color: '#f59e0b', marginTop: '2px' }} />
+                  <div>
+                    <p style={{ color: '#64748b', fontSize: '0.7rem', textTransform: 'uppercase', fontWeight: 600 }}>Amount</p>
+                    <p style={{ color: '#0f172a', fontSize: '0.9rem', fontWeight: 500 }}>{scholarship.amount}</p>
+                  </div>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
+                  <Calendar size={16} style={{ color: '#f59e0b', marginTop: '2px' }} />
+                  <div>
+                    <p style={{ color: '#64748b', fontSize: '0.7rem', textTransform: 'uppercase', fontWeight: 600 }}>Deadline</p>
+                    <p style={{ color: '#0f172a', fontSize: '0.9rem', fontWeight: 500 }}>{scholarship.deadline}</p>
+                  </div>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.5rem' }}>
+                  <Mail size={16} style={{ color: '#f59e0b', marginTop: '2px' }} />
+                  <div>
+                    <p style={{ color: '#64748b', fontSize: '0.7rem', textTransform: 'uppercase', fontWeight: 600 }}>Apply To</p>
+                    <p style={{ color: '#0f172a', fontSize: '0.9rem', fontWeight: 500 }}>{scholarship.applicationEmail}</p>
+                  </div>
+                </div>
+              </div>
+
+              <div style={{ marginBottom: '1.25rem' }}>
+                <p style={{ color: '#64748b', fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase', marginBottom: '0.5rem' }}>Eligible Schools (FT Top 10)</p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                  {scholarship.coveredSchools.map((school, i) => (
+                    <span key={i} style={{ background: '#fef3c7', color: '#92400e', padding: '4px 10px', borderRadius: '6px', fontSize: '0.75rem', fontWeight: 500 }}>{school}</span>
+                  ))}
+                </div>
+              </div>
+
+              <div style={{ marginBottom: '1.25rem' }}>
+                <p style={{ color: '#64748b', fontSize: '0.75rem', fontWeight: 600, textTransform: 'uppercase', marginBottom: '0.5rem' }}>Eligibility Requirements</p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
+                  {scholarship.eligibility.map((req, i) => (
+                    <span key={i} style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#475569', fontSize: '0.85rem' }}>
+                      <CheckCircle size={14} style={{ color: '#10b981' }} />{req}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '1.25rem' }}>
+                {scholarship.highlights.map((h, i) => (
+                  <span key={i} style={{ background: '#ecfdf5', color: '#059669', padding: '6px 12px', borderRadius: '20px', fontSize: '0.8rem', fontWeight: 500 }}>{h}</span>
+                ))}
+              </div>
+
+              <a href={scholarship.website} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.75rem 1.5rem', background: '#f59e0b', color: 'white', borderRadius: '8px', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem' }}>
+                Learn More & Apply <ExternalLink size={14} />
+              </a>
+            </div>
+          ))}
         </div>
 
         {/* Loan Agencies */}

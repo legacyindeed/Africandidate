@@ -1,4 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
+import { AuthProvider } from './context/AuthContext'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
@@ -14,11 +15,15 @@ import Feedback from './pages/Feedback'
 import MBASchools from './pages/MBASchools'
 import Recruiting from './pages/Recruiting'
 import ApplicationStrategy from './pages/ApplicationStrategy'
+import AdmitIndex from './pages/AdmitIndex'
+import AdmitIndexSubmit from './pages/AdmitIndexSubmit'
+import AdmitIndexAdmin from './pages/AdmitIndexAdmin'
 import NotFound from './pages/NotFound'
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <AuthProvider>
+      <div className="flex flex-col min-h-screen">
       <ScrollToTop />
       <Navbar />
       <main className="flex-1">
@@ -39,11 +44,15 @@ function App() {
           <Route path="/mba-schools" element={<MBASchools />} />
           <Route path="/top-mba" element={<MBASchools />} />
           <Route path="/recruiting" element={<Recruiting />} />
+          <Route path="/admit-index" element={<AdmitIndex />} />
+          <Route path="/admit-index/submit" element={<AdmitIndexSubmit />} />
+          <Route path="/admin/admit-index" element={<AdmitIndexAdmin />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />
-    </div>
+      </div>
+    </AuthProvider>
   )
 }
 

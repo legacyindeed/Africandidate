@@ -72,7 +72,7 @@ export const cities = [
     region: "Northeast",
     costIndex: "Expensive",
     school: "Columbia & NYU Stern",
-    costs: { rent: 5500, groceries: 700, transportation: 130, utilities: 200, diningOut: 500, mobilePlan: 50, healthInsurance: 350 }
+    costs: { rent: 3800, groceries: 700, transportation: 130, utilities: 200, diningOut: 500, mobilePlan: 50, healthInsurance: 350 }
   },
 
   // New York - Johnson (Cornell)

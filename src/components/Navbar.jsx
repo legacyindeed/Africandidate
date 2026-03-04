@@ -4,15 +4,16 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 
 const mainLinks = [
   { path: '/', label: 'Home' },
-  { path: '/application-strategy', label: 'Application Strategy' },
   { path: '/mba-schools', label: 'Top 30 MBA Schools' },
+  { path: '/application-strategy', label: 'Application Strategy' },
+  { path: '/admit-index', label: 'Admit Index' },
   { path: '/budget', label: 'Funding' },
-  { path: '/banking', label: 'Banking & Carriers' },
-  { path: '/pre-arrival', label: 'Pre-Arrival' },
   { path: '/recruiting', label: 'Recruiting' },
 ];
 
 const moreLinks = [
+  { path: '/banking', label: 'Banking & Carriers' },
+  { path: '/pre-arrival', label: 'Pre-Arrival' },
   { path: '/stay-and-build', label: 'Stay & Build' },
   { path: '/community', label: 'Community' },
   { path: '/health-insurance', label: 'Health' },
