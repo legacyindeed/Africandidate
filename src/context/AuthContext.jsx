@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect } from 'react';
-import { onAuthStateChanged, signInWithRedirect, getRedirectResult, signOut } from 'firebase/auth';
+import { onAuthStateChanged, signInWithPopup, signOut } from 'firebase/auth';
 import { auth, googleProvider, ADMIN_EMAILS } from '../config/firebase';
 
 const AuthContext = createContext();
@@ -13,42 +13,27 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    let isMounted = true;
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
 
-    const initAuth = async () => {
-      try {
-        // First, check for redirect result (returning from Google sign-in)
-        const result = await getRedirectResult(auth);
-        if (result?.user && isMounted) {
-          setUser(result.user);
-          setLoading(false);
-          return;
-        }
-      } catch (error) {
-        console.error('Redirect result error:', error);
-      }
-
-      // Then listen for auth state changes
-      onAuthStateChanged(auth, (user) => {
-        if (isMounted) {
-          setUser(user);
-          setLoading(false);
-        }
-      });
-    };
-
-    initAuth();
-
-    return () => {
-      isMounted = false;
-    };
+    return () => unsubscribe();
   }, []);
 
   const loginWithGoogle = async () => {
     try {
-      await signInWithRedirect(auth, googleProvider);
+      googleProvider.setCustomParameters({
+        prompt: 'select_account'
+      });
+      const result = await signInWithPopup(auth, googleProvider);
+      return result.user;
     } catch (error) {
       console.error('Login error:', error);
+      // If popup blocked, show alert
+      if (error.code === 'auth/popup-blocked') {
+        alert('Popup was blocked. Please allow popups for this site and try again.');
+      }
       throw error;
     }
   };
