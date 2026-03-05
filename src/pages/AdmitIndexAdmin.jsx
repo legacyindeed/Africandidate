@@ -464,6 +464,16 @@ export default function AdmitIndexAdmin() {
                       {entry.status}
                     </span>
                   </div>
+                  {entry.email && (
+                    <p style={{
+                      fontSize: '0.85rem',
+                      color: '#6366f1',
+                      marginTop: '4px',
+                      fontFamily: "'Plus Jakarta Sans', sans-serif"
+                    }}>
+                      📧 {entry.email}
+                    </p>
+                  )}
                   <p style={{
                     fontSize: '0.9rem',
                     color: '#64748b',
