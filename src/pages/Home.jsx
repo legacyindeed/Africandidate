@@ -22,12 +22,6 @@ export default function Home() {
       <main className="hero-main">
         {/* Left - Content */}
         <div className="hero-content">
-          {/* Badge */}
-          <div className="hero-badge">
-            <span className="badge-dot" />
-            <span>Built by African MBA Students, for African MBA Students</span>
-          </div>
-
           {/* Headline */}
           <h1 className="hero-title">
             Your MBA Journey, <br />
