@@ -321,3 +321,80 @@ export const getScholarshipLabel = (band) => {
     default: return band;
   }
 };
+
+// Generate dynamic anonymous name based on profile data
+export const generateDisplayName = (entry) => {
+  if (entry.display_name && entry.display_name.trim() && entry.display_name !== 'Anonymous') {
+    return entry.display_name;
+  }
+
+  const parts = [];
+
+  // Add country demonym (e.g., Nigerian, Kenyan)
+  if (entry.country) {
+    const demonyms = {
+      'Nigeria': 'Nigerian', 'Kenya': 'Kenyan', 'Ghana': 'Ghanaian',
+      'South Africa': 'South African', 'Ethiopia': 'Ethiopian', 'Egypt': 'Egyptian',
+      'Tanzania': 'Tanzanian', 'Uganda': 'Ugandan', 'Rwanda': 'Rwandan',
+      'Cameroon': 'Cameroonian', 'Senegal': 'Senegalese', 'Ivory Coast': 'Ivorian',
+      'Morocco': 'Moroccan', 'Algeria': 'Algerian', 'Tunisia': 'Tunisian',
+      'Zimbabwe': 'Zimbabwean', 'Zambia': 'Zambian', 'Botswana': 'Motswana',
+      'Namibia': 'Namibian', 'Mozambique': 'Mozambican', 'Angola': 'Angolan',
+      'Democratic Republic of Congo': 'Congolese', 'Republic of Congo': 'Congolese',
+      'Mali': 'Malian', 'Burkina Faso': 'Burkinabè', 'Niger': 'Nigerien',
+      'Benin': 'Beninese', 'Togo': 'Togolese', 'Liberia': 'Liberian',
+      'Sierra Leone': 'Sierra Leonean', 'Guinea': 'Guinean', 'Gambia': 'Gambian',
+      'Mauritius': 'Mauritian', 'Madagascar': 'Malagasy', 'Malawi': 'Malawian',
+      'Eswatini': 'Swazi', 'Lesotho': 'Mosotho', 'Gabon': 'Gabonese',
+      'Equatorial Guinea': 'Equatoguinean', 'Chad': 'Chadian', 'Sudan': 'Sudanese',
+      'South Sudan': 'South Sudanese', 'Eritrea': 'Eritrean', 'Djibouti': 'Djiboutian',
+      'Somalia': 'Somali', 'Seychelles': 'Seychellois', 'Cape Verde': 'Cape Verdean',
+      'Comoros': 'Comorian', 'Mauritania': 'Mauritanian', 'Libya': 'Libyan',
+      'Burundi': 'Burundian', 'Central African Republic': 'Central African',
+      'Sao Tome and Principe': 'São Toméan', 'Guinea-Bissau': 'Bissau-Guinean'
+    };
+    parts.push(demonyms[entry.country] || entry.country);
+  }
+
+  // Add gender if provided
+  if (entry.gender && entry.gender !== 'Prefer not to say') {
+    parts.push(entry.gender);
+  }
+
+  // Shorten industry names
+  const shortenIndustry = (industry) => {
+    const shortcuts = {
+      'Investment Banking': 'IB',
+      'Private Equity': 'PE',
+      'Venture Capital': 'VC',
+      'Technology': 'Tech',
+      'FMCG/Consumer Goods': 'FMCG',
+      'Financial Services': 'Finance',
+      'Government/Public Sector': 'Public Sector',
+      'Non-Profit/NGO': 'Non-Profit',
+      'Media/Entertainment': 'Media',
+      'Energy/Oil & Gas': 'Energy',
+      'Technology/Product Management': 'Tech PM',
+      'Technology/Software Engineering': 'Tech SWE',
+      'FMCG/Brand Management': 'Brand Mgmt',
+      'Corporate Strategy': 'Strategy',
+      'Social Impact/Non-Profit': 'Social Impact'
+    };
+    return shortcuts[industry] || industry;
+  };
+
+  // Add career path
+  if (entry.industry && entry.post_mba_industry) {
+    const preShort = shortenIndustry(entry.industry);
+    const postShort = shortenIndustry(entry.post_mba_industry);
+    if (preShort !== postShort) {
+      parts.push(`${preShort} → ${postShort}`);
+    } else {
+      parts.push(preShort);
+    }
+  } else if (entry.industry) {
+    parts.push(shortenIndustry(entry.industry));
+  }
+
+  return parts.length > 0 ? parts.join(' | ') : 'MBA Candidate';
+};
