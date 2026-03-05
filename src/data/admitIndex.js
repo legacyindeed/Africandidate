@@ -260,6 +260,13 @@ export const filterEntries = (entries, filters) => {
 export const validateEntry = (entry) => {
   const errors = {};
 
+  // Email validation
+  if (!entry.email?.trim()) {
+    errors.email = 'Email is required';
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(entry.email)) {
+    errors.email = 'Please enter a valid email address';
+  }
+
   if (!entry.gender) errors.gender = 'Gender is required';
   if (!entry.application_round) errors.application_round = 'Application round is required';
   if (!entry.country) errors.country = 'Country is required';

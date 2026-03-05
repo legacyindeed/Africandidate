@@ -22,6 +22,7 @@ export default function AdmitIndexSubmit() {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
+    email: '',
     display_name: '',
     gender: '',
     application_round: '',
@@ -207,6 +208,20 @@ export default function AdmitIndexSubmit() {
             padding: '32px',
             border: '1px solid #e2e8f0'
           }}>
+            {/* Email */}
+            <div style={fieldGroup}>
+              <label style={labelStyle}>Email *</label>
+              <input
+                type="email"
+                value={formData.email}
+                onChange={(e) => handleChange('email', e.target.value)}
+                placeholder="your@email.com"
+                style={{ ...inputStyle, ...(errors.email && errorBorder) }}
+              />
+              <p style={hintStyle}>For verification only. This will not be made public.</p>
+              {errors.email && <p style={errorStyle}>{errors.email}</p>}
+            </div>
+
             {/* Display Name */}
             <div style={fieldGroup}>
               <label style={labelStyle}>Display Name (optional)</label>
