@@ -13,21 +13,35 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Handle redirect result when returning from Google sign-in
-    getRedirectResult(auth).then((result) => {
-      if (result?.user) {
-        setUser(result.user);
+    let isMounted = true;
+
+    const initAuth = async () => {
+      try {
+        // First, check for redirect result (returning from Google sign-in)
+        const result = await getRedirectResult(auth);
+        if (result?.user && isMounted) {
+          setUser(result.user);
+          setLoading(false);
+          return;
+        }
+      } catch (error) {
+        console.error('Redirect result error:', error);
       }
-    }).catch((error) => {
-      console.error('Redirect result error:', error);
-    });
 
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setUser(user);
-      setLoading(false);
-    });
+      // Then listen for auth state changes
+      onAuthStateChanged(auth, (user) => {
+        if (isMounted) {
+          setUser(user);
+          setLoading(false);
+        }
+      });
+    };
 
-    return unsubscribe;
+    initAuth();
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   const loginWithGoogle = async () => {
