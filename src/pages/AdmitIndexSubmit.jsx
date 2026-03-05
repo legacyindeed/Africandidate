@@ -233,6 +233,7 @@ export default function AdmitIndexSubmit() {
                 style={inputStyle}
               />
               <p style={hintStyle}>Leave blank to appear as "Anonymous"</p>
+            </div>
 
             {/* Gender */}
             <div style={fieldGroup}>
