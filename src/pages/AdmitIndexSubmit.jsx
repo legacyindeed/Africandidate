@@ -129,9 +129,11 @@ export default function AdmitIndexSubmit() {
       navigate('/admit-index?submitted=true');
     } catch (error) {
       console.error('Error submitting entry:', error);
-      setErrors({ submit: 'Failed to submit. Please try again. Error: ' + error.message });
+      setErrors({ submit: 'Failed to submit. Please try again.' });
       setIsSubmitting(false);
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
