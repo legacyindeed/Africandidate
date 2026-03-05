@@ -107,8 +107,8 @@ export default function Home() {
               <MapPin size={20} />
             </div>
             <div className="card-content">
-              <span className="location-city">Boston, MA</span>
-              <span className="location-cost">$4,200/mo</span>
+              <span className="location-city">Austin, TX</span>
+              <span className="location-cost">$1,500/mo</span>
             </div>
           </div>
 
