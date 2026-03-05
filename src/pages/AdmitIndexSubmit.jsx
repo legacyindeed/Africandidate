@@ -587,6 +587,13 @@ const errorBorder = {
   borderColor: '#fca5a5'
 };
 
+const errorStyle = {
+  fontSize: '0.8rem',
+  color: '#dc2626',
+  marginTop: '6px',
+  fontFamily: "'Plus Jakarta Sans', sans-serif"
+};
+
 const hintStyle = {
   fontSize: '0.8rem',
   color: '#64748b',
