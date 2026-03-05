@@ -265,8 +265,6 @@ export default function AdmitIndexSubmit() {
               </select>
             </div>
 
-            </div>
-
             {/* Country */}
             <div style={fieldGroup}>
               <label style={labelStyle}>Country *</label>
