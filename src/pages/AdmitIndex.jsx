@@ -507,6 +507,39 @@ export default function AdmitIndex() {
                 </div>
               </div>
 
+              {/* Rejected Schools */}
+              {entry.schools_rejected && entry.schools_rejected.length > 0 && (
+                <div style={{ marginBottom: '16px' }}>
+                  <p style={{
+                    fontSize: '0.8rem',
+                    color: '#64748b',
+                    marginBottom: '6px',
+                    fontWeight: 500,
+                    fontFamily: "'Plus Jakarta Sans', sans-serif"
+                  }}>
+                    Rejected from:
+                  </p>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                    {entry.schools_rejected.map((school, i) => (
+                      <span
+                        key={i}
+                        style={{
+                          background: '#fef2f2',
+                          color: '#dc2626',
+                          padding: '4px 10px',
+                          borderRadius: '6px',
+                          fontSize: '0.8rem',
+                          fontWeight: 500,
+                          fontFamily: "'Plus Jakarta Sans', sans-serif"
+                        }}
+                      >
+                        {school}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {/* Differentiator */}
               <div style={{
                 background: '#f8fafc',
