@@ -123,7 +123,7 @@ export default function AdmitIndex() {
               marginBottom: '4px',
               fontFamily: "'Plus Jakarta Sans', sans-serif"
             }}>
-              Admit Index
+              Decision Board
             </h1>
             <p style={{
               fontSize: '0.95rem',

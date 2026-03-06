@@ -156,7 +156,7 @@ export default function AdmitIndexSubmit() {
             fontFamily: "'Plus Jakarta Sans', sans-serif"
           }}
         >
-          ← Back to Admit Index
+          ← Back to Decision Board
         </Link>
 
         <h1 style={{

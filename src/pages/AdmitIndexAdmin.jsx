@@ -315,7 +315,7 @@ export default function AdmitIndexAdmin() {
               marginBottom: '8px',
               fontFamily: "'Plus Jakarta Sans', sans-serif"
             }}>
-              Admit Index Admin
+              Decision Board Admin
             </h1>
             <p style={{
               fontSize: '1rem',

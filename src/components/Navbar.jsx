@@ -6,7 +6,7 @@ const mainLinks = [
   { path: '/', label: 'Home' },
   { path: '/mba-schools', label: 'Top 30 MBA Schools' },
   { path: '/application-strategy', label: 'Application Strategy' },
-  { path: '/admit-index', label: 'Admit Index' },
+  { path: '/admit-index', label: 'Decision Board' },
   { path: '/budget', label: 'Funding' },
   { path: '/recruiting', label: 'Recruiting' },
 ];
